@@ -1,0 +1,19 @@
+{
+  "name": "anvil-connect-cli",
+  "version": "0.0.0",
+  "description": "CLI for Anvil Connect",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Christian Smith",
+    "email": "smith@anvil.io",
+    "url": "http://anvil.io"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "nash": "^2.0.0",
+    "update-notifier": "^0.3.1"
+  }
+}
