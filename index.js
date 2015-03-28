@@ -2,13 +2,11 @@
  * Dependencies
  */
 
-var pkg       = require('./package.json')
-  , fs        = require('fs')
-  , path      = require('path')
-  , nash      = require('nash')
-  , commands  = require('./lib/commands')
-  , plugins   = require('./lib/plugins')
-  , cli       = nash()
+var pkg  = require('./package.json')
+  , fs   = require('fs')
+  , path = require('path')
+  , nash = require('nash')
+  , cli  = nash()
   ;
 
 
@@ -32,11 +30,33 @@ cli.set({
 
 
 /**
+ * Initialize
+ * Requires and registers a directory of plugins.
+ */
+
+cli.initialize = function (directory) {
+  var plugins = []
+    , modules = fs.readdirSync(directory)
+    ;
+
+  modules.forEach(function (mod) {
+    if (path.extname(mod) === '.js' && path.basename(mod) !== 'index.js') {
+      plugins.push({
+        register: require(path.join(__dirname, directory, mod))
+      });
+    }
+  });
+
+  cli.register(plugins, function (err) {});
+}
+
+
+/**
  * Register Commands and Plugins
  */
 
-cli.register(commands, function (err) {});
-cli.register(plugins, function (err) {});
+cli.initialize('./lib/commands');
+cli.initialize('./lib/plugins');
 
 
 /**
