@@ -3,8 +3,11 @@
  */
 
 var pkg       = require('./package.json')
+  , fs        = require('fs')
+  , path      = require('path')
   , nash      = require('nash')
   , commands  = require('./lib/commands')
+  , plugins   = require('./lib/plugins')
   , cli       = nash()
   ;
 
@@ -16,6 +19,10 @@ var pkg       = require('./package.json')
 cli.set({
   pkg:
     pkg,
+  logo:
+    fs.readFileSync(
+      path.join(__dirname, 'lib', 'logo.txt'), 'ascii'
+    ),
   website:
     'http://anvil.io',
   description:
@@ -25,10 +32,11 @@ cli.set({
 
 
 /**
- * Register Commands
+ * Register Commands and Plugins
  */
 
 cli.register(commands, function (err) {});
+cli.register(plugins, function (err) {});
 
 
 /**
