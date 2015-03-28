@@ -13,6 +13,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "chalk": "^1.0.0",
     "nash": "^2.0.0",
     "update-notifier": "^0.3.1"
   }
