@@ -11,6 +11,10 @@
     "email": "smith@anvil.io",
     "url": "http://anvil.io"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anvilresearch/connect-cli.git"
+  },
   "license": "MIT",
   "dependencies": {
     "chalk": "^1.0.0",
