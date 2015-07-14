@@ -42,7 +42,7 @@ cli.initialize = function (directory) {
   modules.forEach(function (mod) {
     if (path.extname(mod) === '.js' && path.basename(mod) !== 'index.js') {
       plugins.push({
-        register: require(path.join(__dirname, directory, mod))
+        register: require(path.join(directory, mod))
       });
     }
   });
@@ -55,8 +55,8 @@ cli.initialize = function (directory) {
  * Register Commands and Plugins
  */
 
-cli.initialize('./lib/commands');
-cli.initialize('./lib/plugins');
+cli.initialize(path.join(__dirname, 'lib', 'commands'));
+cli.initialize(path.join(__dirname, 'lib', 'plugins'));
 
 
 /**
