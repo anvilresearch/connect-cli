@@ -1,0 +1,16 @@
+{
+  "name": "<%= appname %>",
+  "version": "0.0.0",
+  "description": "Anvil Connect Deployment",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/vendor",
+    "test"
+  ],
+  "dependencies": {
+    "crypto-js": "~3.1.4",
+    "event-source-polyfill": "~0.0.4"
+  }
+}
