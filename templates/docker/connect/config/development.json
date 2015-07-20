@@ -1,0 +1,20 @@
+{
+  "issuer": "http://localhost:3000",
+  "client_registration": "scoped",
+  "cookie_secret": "<%= cookie_secret %>",
+  "session_secret": "<%= session_secret %>",
+  "providers": {
+    "password": true,
+    "google": {
+      "client_id": "ID",
+      "client_secret": "SECRET",
+      "scope": [
+        "https://www.googleapis.com/auth/userinfo.profile",
+        "https://www.googleapis.com/auth/userinfo.email"
+      ]
+    }
+  },
+  "redis": {
+    "url": "redis://localhost:6379"
+  }
+}
