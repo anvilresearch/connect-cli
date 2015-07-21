@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "nv": "./bin/nv"
+  },
   "author": {
     "name": "Christian Smith",
     "email": "smith@anvil.io",
