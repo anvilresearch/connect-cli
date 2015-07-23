@@ -1,13 +1,13 @@
 {
   "name": "anvil-connect-cli",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "CLI for Anvil Connect",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "nv": "./bin/nv"
+    "nvl": "./bin/nvl"
   },
   "author": {
     "name": "Christian Smith",
