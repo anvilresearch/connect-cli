@@ -1,6 +1,6 @@
 connect:
   #build: connect
-  image: anvilresearch/connect
+  image: anvilresearch/connect:<%= version %>
   links:
     - redis
   volumes:
