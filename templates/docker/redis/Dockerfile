@@ -26,7 +26,3 @@ WORKDIR /data
 
 # Define default command
 CMD [ "redis-server" ]
-
-# Expose port
-EXPOSE 6379
-

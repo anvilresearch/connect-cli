@@ -5,9 +5,11 @@ connect:
     - redis
   volumes:
     - ./connect/config:/opt/connect/config:ro
+    - ./connect/email:/opt/connect/email:ro
+    - ./connect/protocols:/opt/connect/protocols:ro
+    - ./connect/providers:/opt/connect/providers:ro
+    - ./connect/public:/opt/connect/public:ro
     - ./connect/views:/opt/connect/views:ro
-  ports:
-    - "3000:3000"
   restart: always
 
 nginx:
@@ -18,9 +20,9 @@ nginx:
   volumes:
     - ./nginx/conf.d:/etc/nginx/conf.d:ro
     - ./nginx/certs:/etc/nginx/certs:ro
-    - ./connect/public:/var/www/html:ro
     - ./nginx/logs:/var/log/nginx
   ports:
+    - "80:80"
     - "443:443"
   restart: always
 
@@ -29,6 +31,4 @@ redis:
   image: anvilresearch/redis
   volumes:
     - ./redis/data:/data
-  ports:
-    - "6379:6379"
   restart: always

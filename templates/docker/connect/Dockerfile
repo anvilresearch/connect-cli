@@ -4,7 +4,7 @@
 # https://github.com/anvilresearch/connect
 #
 
-FROM mhart/alpine-iojs:2.3.0
+FROM mhart/alpine-iojs:3.1.0
 
 # Install npm package build dependencies
 RUN apk add --update python make alpine-sdk && \
@@ -21,13 +21,10 @@ COPY ./server.js /opt/connect/server.js
 RUN npm install --production
 
 # Define mountable directories
-VOLUME ["/opt/connect/config", "/opt/connect/views"]
+VOLUME [ "/opt/connect/config", "/opt/connect/email", "/opt/connect/protocols", "/opt/connect/providers", "/opt/connect/public", "/opt/connect/views" ]
 
 # Define environment variables
 ENV NODE_ENV production
 
 # Define default command
 CMD ["node", "server.js"]
-
-# Expose port
-EXPOSE 3000
