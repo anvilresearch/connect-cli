@@ -4,7 +4,7 @@
   "description": "CLI for Anvil Connect",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard"
   },
   "bin": {
     "nvl": "./bin/nvl"
@@ -30,5 +30,8 @@
     "update-notifier": "^0.5.0",
     "yeoman-environment": "^1.2.7",
     "yeoman-generator": "^0.20.2"
+  },
+  "devDependencies": {
+    "standard": "^5.1.0"
   }
 }
