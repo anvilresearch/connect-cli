@@ -1,6 +1,6 @@
 {
   "name": "anvil-connect-cli",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "CLI for Anvil Connect",
   "main": "index.js",
   "scripts": {
