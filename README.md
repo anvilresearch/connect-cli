@@ -65,3 +65,8 @@ file or complete [docs][docs] for instructions on how to run the server.
 
 
 [docs]: https://github.com/anvilresearch/connect-docs
+
+
+## MIT License
+
+Copyright (c) 2015 [Anvil Research, Inc.](http://anvil.io)
