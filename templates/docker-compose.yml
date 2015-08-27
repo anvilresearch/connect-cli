@@ -6,6 +6,7 @@ connect:
   volumes:
     - ./connect/config:/opt/connect/config:ro
     - ./connect/email:/opt/connect/email:ro
+    - ./connect/keys:/opt/connect/keys
     - ./connect/protocols:/opt/connect/protocols:ro
     - ./connect/providers:/opt/connect/providers:ro
     - ./connect/public:/opt/connect/public:ro
