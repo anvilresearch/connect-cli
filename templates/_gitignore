@@ -1,3 +1,6 @@
-node_modules
-config.*.json
+connect/keys
+connect/config
+connect/node_modules
+nginx/certs
+redis/data
 *.pem
