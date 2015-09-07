@@ -20,6 +20,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "anvil-connect-nodejs": "^0.2.0",
     "async": "^1.4.0",
     "chalk": "^1.0.0",
     "fs-extra": "^0.22.1",
