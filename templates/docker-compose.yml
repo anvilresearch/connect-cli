@@ -33,3 +33,5 @@ redis:
   volumes:
     - ./redis/data:/data
   restart: always
+  expose:
+    - "6379"
