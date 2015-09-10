@@ -73,6 +73,7 @@ cli.registerModules = function (modules, callback) {
 cli.initialize = function (callback) {
   cli.registerModules([
     path.join(__dirname, 'lib', 'plugins', 'logger'),
+    path.join(__dirname, 'lib', 'plugins', 'env'),
     path.join(__dirname, 'lib', 'commands')
   ], callback)
 }
