@@ -25,24 +25,38 @@ cli.set({
 })
 
 /**
- * Register directories
+ * Register modules
  *
- * Requires and registers a directory of plugins.
+ * Requires and registers plugins.
  */
 
-cli.registerDirectories = function (directories, callback) {
+cli.registerModules = function (modules, callback) {
   var plugins = []
 
-  directories.forEach(function (directory) {
-    var modules = fs.readdirSync(directory)
+  modules.forEach(function (jsModule) {
+    var isDirectory = false
 
-    modules.forEach(function (mod) {
-      if (path.extname(mod) === '.js' && path.basename(mod) !== 'index.js') {
-        plugins.push({
-          register: require(path.join(directory, mod))
-        })
-      }
-    })
+    try {
+      isDirectory = fs.lstatSync(jsModule).isDirectory()
+    } catch (e) {}
+
+    // Directory was passed; enumerate through and register contents
+    if (isDirectory) {
+      var modules = fs.readdirSync(jsModule)
+
+      modules.forEach(function (mod) {
+        if (path.extname(mod) === '.js' && path.basename(mod) !== 'index.js') {
+          plugins.push({
+            register: require(path.join(jsModule, mod))
+          })
+        }
+      })
+    // Single file was passed; register it
+    } else {
+      plugins.push({
+        register: require(jsModule + '.js')
+      })
+    }
   })
 
   cli.register(plugins, function (err) {
@@ -57,9 +71,17 @@ cli.registerDirectories = function (directories, callback) {
  */
 
 cli.initialize = function (callback) {
-  cli.registerDirectories([
-    path.join(__dirname, 'lib', 'commands'),
-    path.join(__dirname, 'lib', 'plugins')
+  cli.registerModules([
+    path.join(__dirname, 'lib', 'plugins', 'logger'),
+    path.join(__dirname, 'lib', 'plugins', 'env'),
+    path.join(__dirname, 'lib', 'plugins', 'fs'),
+    path.join(__dirname, 'lib', 'plugins', 'json'),
+    path.join(__dirname, 'lib', 'plugins', 'yaml'),
+    path.join(__dirname, 'lib', 'plugins', 'prompt'),
+    path.join(__dirname, 'lib', 'plugins', 'config'),
+    path.join(__dirname, 'lib', 'plugins', 'issuers'),
+    path.join(__dirname, 'lib', 'plugins', 'login'),
+    path.join(__dirname, 'lib', 'commands')
   ], callback)
 }
 
