@@ -76,6 +76,7 @@ cli.initialize = function (callback) {
     path.join(__dirname, 'lib', 'plugins', 'env'),
     path.join(__dirname, 'lib', 'plugins', 'fs'),
     path.join(__dirname, 'lib', 'plugins', 'config'),
+    path.join(__dirname, 'lib', 'plugins', 'issuers'),
     path.join(__dirname, 'lib', 'commands')
   ], callback)
 }
