@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 /* global process */
 
+require('nodeversioncheck'); // Ensure running in a compatible version of node
+
 // Dependencies
 var cli = require('../index.js');
 var pkg = require('../package.json');

@@ -14,9 +14,9 @@ MAINTAINER Anvil Research, Inc. <smith@anvil.io>
 ENV NGINX_VERSION 1.8.0
 ENV NGINX_VERSION_RELEASE -r1
 
-# Install redis
+# Install nginx
 RUN apk update && \
-    apk add --update redis=${NGINX_VERSION}${NGINX_VERSION_RELEASE} && \
+    apk add --update nginx=${NGINX_VERSION}${NGINX_VERSION_RELEASE} && \
     rm -rf /var/cache/apk/*
 
 # Copy main config file
