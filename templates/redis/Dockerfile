@@ -6,14 +6,16 @@
 
 FROM alpine:3.2
 
+# Version
+ENV REDIS_VERSION 3.0.2
+ENV REDIS_VERSION_RELEASE -r0
+
 # Install redis
-RUN apk add --update redis && \
+RUN apk update && \
+    apk add --update redis=${REDIS_VERSION}${REDIS_VERSION_RELEASE} && \
     rm -rf /var/cache/apk/* && \
     mkdir /data && \
     chown -R redis:redis /data
-
-# Version
-ENV REDIS_VERSION 3.0.2
 
 # Add configuration
 COPY etc /etc/
