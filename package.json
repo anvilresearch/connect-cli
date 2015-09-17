@@ -32,7 +32,6 @@
     "lx-valid": "^0.5.6",
     "mkdirp": "^0.5.0",
     "nash": "^2.0.0",
-    "nodeversioncheck": "^1.0.0",
     "qs": "^5.0.0",
     "request": "^2.61.0",
     "request-promise": "^0.4.3",
