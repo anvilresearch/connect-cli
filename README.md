@@ -17,7 +17,7 @@ server. After installing the CLI, run `nvl init` in your shell inside a clean
 directory.
 
 **If running Docker via Boot2Docker on OS/X or Windows, see the
-[warning](#Warning_for_Boot2Docker_Users) below**
+[warning](#warning-for-boot2docker-users) below**
 
 ```bash
 $ nvl init
