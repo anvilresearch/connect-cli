@@ -19,6 +19,9 @@
     "url": "https://github.com/anvilresearch/connect-cli.git"
   },
   "license": "MIT",
+  "engines": {
+    "node": ">=0.12.2"
+  },
   "dependencies": {
     "anvil-connect-keys": "^0.1.0",
     "anvil-connect-nodejs": "^0.2.0",
@@ -35,6 +38,7 @@
     "qs": "^5.0.0",
     "request": "^2.61.0",
     "request-promise": "^0.4.3",
+    "semver": "^5.0.1",
     "underscore.string": "^3.1.1",
     "update-notifier": "^0.5.0",
     "yeoman-environment": "^1.2.7",
