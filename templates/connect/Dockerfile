@@ -4,11 +4,7 @@
 # https://github.com/anvilresearch/connect
 #
 
-FROM mhart/alpine-iojs:3.1.0
-
-# Install npm package build dependencies
-RUN apk add --update python make alpine-sdk && \
-    rm /var/cache/apk/*
+FROM mhart/alpine-node:4.1.0
 
 # Define working dir
 WORKDIR /opt/connect
@@ -17,8 +13,14 @@ WORKDIR /opt/connect
 COPY ./package.json /opt/connect/package.json
 COPY ./server.js /opt/connect/server.js
 
-# Install npm dependencies
-RUN npm install --production
+# Install npm package
+RUN apk add --update python make alpine-sdk && \
+    npm install --production && \
+    apk del python make alpine-sdk && \
+    rm /var/cache/apk/* && \
+    rm -rf /root/.npm /root/.node-gyp && \
+    rm -rf /usr/lib/node_modules && \
+    rm -rf /tmp/*
 
 # Define mountable directories
 VOLUME [ "/opt/connect/config", "/opt/connect/email", "/opt/connect/protocols", "/opt/connect/providers", "/opt/connect/public", "/opt/connect/views" ]
