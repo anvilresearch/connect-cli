@@ -16,6 +16,9 @@ directory containing all the files you'll need to run and customize your auth
 server. After installing the CLI, run `nvl init` in your shell inside a clean
 directory.
 
+**If running Docker via Boot2Docker on OS/X or Windows, see the
+[warning](#warning-for-boot2docker-users) below**
+
 ```bash
 $ nvl init
 ```
@@ -66,6 +69,19 @@ file or complete [docs][docs] for instructions on how to run the server.
 
 [docs]: https://github.com/anvilresearch/connect-docs
 
+#### Warning for Boot2Docker Users
+If you're running on a Mac or Windows computer using boot2docker (this includes
+kitematic and docker-toolbox), then you must ensure that the project folder is
+located somewhere underneath ```/Users/``` on OS/X or ```c:\Users\``` on Windows.
+This is because boot2docker by default can only map subdirectories of these
+folders into the Docker containers.
+
+If the project folder exists within your home directory or your ```Documents```
+folder, then it will work fine.
+
+If you must locate the project folder elsewhere, see this
+[StackOverlow post](http://stackoverflow.com/questions/30586949/how-do-i-map-volume-outside-c-users-to-container-on-windows)
+for a possible procedure.
 
 ## MIT License
 
