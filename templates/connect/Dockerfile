@@ -4,7 +4,7 @@
 # https://github.com/anvilresearch/connect
 #
 
-FROM mhart/alpine-iojs:3.1.0
+FROM mhart/alpine-node:4.1.0
 
 # Define working dir
 WORKDIR /opt/connect
