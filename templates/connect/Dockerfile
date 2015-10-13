@@ -14,7 +14,7 @@ COPY ./package.json /opt/connect/package.json
 COPY ./server.js /opt/connect/server.js
 
 # Install npm package
-RUN apk add --update python make alpine-sdk && \
+RUN apk add --update python make alpine-sdk openssl && \
     npm install --production && \
     apk del python make alpine-sdk && \
     rm /var/cache/apk/* && \
