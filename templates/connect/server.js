@@ -30,3 +30,10 @@ if (cluster.isMaster) {
 cluster.on('exit', function (worker) {
   cluster.fork()
 })
+
+/**
+ * Respond to SIGTERM by gracefully terminating server
+ */
+process.on('SIGTERM', function () {
+  process.exit()
+})
