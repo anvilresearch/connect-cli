@@ -27,4 +27,4 @@ VOLUME ["/data", "/logs"]
 WORKDIR /data
 
 # Define default command
-CMD [ "redis-server" ]
+CMD [ "redis-server", "/etc/redis.conf" ]
