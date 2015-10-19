@@ -26,6 +26,7 @@
     "anvil-connect-keys": "^0.1.0",
     "anvil-connect-nodejs": "^0.2.3",
     "async": "^1.4.0",
+    "cardinal": "^0.5.0",
     "chalk": "^1.0.0",
     "cli-table": "^0.3.1",
     "fs-extra": "^0.24.0",
