@@ -20,7 +20,7 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=0.12.2"
+    "node": ">=4.2.3"
   },
   "dependencies": {
     "anvil-connect-keys": "^0.1.0",

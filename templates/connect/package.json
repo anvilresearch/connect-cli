@@ -8,7 +8,7 @@
     "start": "node server.js"
   },
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=4.2.3"
   },
   "dependencies": {
     "anvil-connect": "^<%= version %>"
