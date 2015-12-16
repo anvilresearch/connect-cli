@@ -1,6 +1,6 @@
 connect:
-  #build: connect
-  image: anvilresearch/connect:<%= version %>
+  build: connect
+  #image: anvilresearch/connect:<%= version %>
   links:
     - redis
   volumes:
@@ -14,8 +14,8 @@ connect:
   restart: always
 
 nginx:
-  #build: nginx
-  image: anvilresearch/nginx:<%= version %>
+  build: nginx
+  #image: anvilresearch/nginx:<%= version %>
   links:
     - connect
   volumes:
@@ -28,8 +28,8 @@ nginx:
   restart: always
 
 redis:
-  #build: redis
-  image: anvilresearch/redis:<%= version %>
+  build: redis
+  #image: anvilresearch/redis:<%= version %>
   volumes:
     - ./redis/data:/data
     - ./redis/logs:/logs
