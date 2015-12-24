@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "anvil-connect-keys": "^0.1.0",
-    "anvil-connect-nodejs": "^0.2.3",
+    "anvil-connect-nodejs": "^0.2.5",
     "async": "^1.4.0",
     "cardinal": "^0.5.0",
     "chalk": "^1.0.0",
