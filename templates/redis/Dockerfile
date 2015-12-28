@@ -7,7 +7,7 @@
 FROM alpine:3.2
 
 # Version
-ENV REDIS_VERSION 3.0.2
+ENV REDIS_VERSION 3.0.5
 ENV REDIS_VERSION_RELEASE -r0
 
 # Install redis
