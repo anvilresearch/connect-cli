@@ -23,7 +23,7 @@ RUN apk add --update python make alpine-sdk openssl && \
     rm -rf /tmp/*
 
 # Define mountable directories
-VOLUME [ "/opt/connect/config", "/opt/connect/email", "/opt/connect/protocols", "/opt/connect/providers", "/opt/connect/public", "/opt/connect/views" ]
+VOLUME [ "/opt/connect/config", "/opt/connect/keys", "/opt/connect/email", "/opt/connect/protocols", "/opt/connect/providers", "/opt/connect/public", "/opt/connect/views" ]
 
 # Define environment variables
 ENV NODE_ENV production
