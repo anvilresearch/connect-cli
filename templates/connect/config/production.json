@@ -16,5 +16,9 @@
   },
   "redis": {
     "host": "redis"
+  },
+  "logger": {
+    "stdout": true,
+    "file": true
   }
 }
