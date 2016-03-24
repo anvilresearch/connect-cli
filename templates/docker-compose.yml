@@ -35,5 +35,3 @@ redis:
     - ./redis/data:/data
     - ./redis/logs:/logs
   restart: always
-  expose:
-    - "6379"
