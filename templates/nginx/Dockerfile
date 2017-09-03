@@ -12,7 +12,7 @@ MAINTAINER Anvil Research, Inc. <smith@anvil.io>
 
 # Version
 ENV NGINX_VERSION 1.8.1
-ENV NGINX_VERSION_RELEASE -r0
+ENV NGINX_VERSION_RELEASE -r1
 
 # Install nginx
 RUN apk update && \
