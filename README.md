@@ -1,7 +1,7 @@
 # CLI for Anvil Connect
 [![Build Status](https://travis-ci.org/anvilresearch/connect-cli.svg?branch=master)](https://travis-ci.org/anvilresearch/connect-cli)
 
-Work-in-progress rewrite of the CLI included with [Anvil Connect](https://github.com/anvilresearch/connect).
+Rewrite of the CLI included with [Anvil Connect](https://github.com/anvilresearch/connect) -- work-in-progress.
 
 
 ### Install
