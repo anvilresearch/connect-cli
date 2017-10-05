@@ -8,7 +8,7 @@
 FROM alpine:3.6
 
 # Maintainer
-MAINTAINER Anvil Research, Inc. <smith@anvil.io>
+LABEL maintainer="Anvil Research, Inc. <smith@anvil.io>"
 
 # Version
 ENV NGINX_VERSION 1.12.1
