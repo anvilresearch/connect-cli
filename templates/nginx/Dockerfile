@@ -5,14 +5,14 @@
 #
 
 # Pull base image.
-FROM alpine:3.2
+FROM alpine:3.6
 
 # Maintainer
 MAINTAINER Anvil Research, Inc. <smith@anvil.io>
 
 # Version
-ENV NGINX_VERSION 1.8.1
-ENV NGINX_VERSION_RELEASE -r0
+ENV NGINX_VERSION 1.12.1
+ENV NGINX_VERSION_RELEASE -r3
 
 # Install nginx
 RUN apk update && \
